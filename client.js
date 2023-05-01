@@ -65,9 +65,15 @@ addTile( 'F', 4 );
 console.log( ...myScrabbleTiles )
 
 // 6. Complete this function. It needs to be given an array of tile objects. The function will use a for-loop and return the sum of all the scores in the given array.
-function sumTiles(anArray) {
-
+function sumTiles( anArray ) {
+  let totalScore = 0
+  for (i = 0; i < myScrabbleTiles.length; i++ ){
+  totalScore = totalScore + myScrabbleTiles[i].score;
+  }
+  return totalScore 
 }
+
+console.log( sumTiles( myScrabbleTiles ) );
 
 
 // 7. Use the function above to get the total score for myScrabbleTiles and assign the value to a variable called "myScore".
