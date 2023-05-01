@@ -36,9 +36,18 @@ function addTile (tile, score){
 }
 
 // running function to add first tile to array
-addTile( 'N', 1)
-// console logging expanded array
-console.log( ...myScrabbleTiles )
+addTile( 'N', 1 );
+// console logging expanded array to test
+console.log( ...myScrabbleTiles );
+
+// pushing rest of tiles into array
+addTile( 'K', 5 );
+addTile( 'Z', 10 );
+addTile( 'X', 8 );
+addTile( 'D', 2 );
+addTile( 'A', 1 );
+// console logging new fully loaded expanded array
+console.log( ...myScrabbleTiles );
 
 // 4. Remove the last tile from myScrabbleTiles.
 
