@@ -26,7 +26,7 @@ let myScrabbleTiles = [];
 */
 // using function addTile to push tiles above into array myScrabbleTiles
 function addTile (tile, score){
-  // creating object with multiple values for tile and score
+  // creating object with multiple values for tile and score inside function
   let tileToAdd = {
     tile : tile,
     score: score
@@ -50,12 +50,19 @@ addTile( 'A', 1 );
 console.log( ...myScrabbleTiles );
 
 // 4. Remove the last tile from myScrabbleTiles.
+// using .pop on myScrabbleTiles array to remove last item
+myScrabbleTiles.pop()
+// console logging to show change without expanded array
+console.log( myScrabbleTiles );
+
 
 
 // 5. Add the following new tile to myScrabbleTiles:
 /*
   { tile: 'F', score : 4 }
 */
+addTile( 'F', 4 );
+console.log( ...myScrabbleTiles )
 
 // 6. Complete this function. It needs to be given an array of tile objects. The function will use a for-loop and return the sum of all the scores in the given array.
 function sumTiles(anArray) {
