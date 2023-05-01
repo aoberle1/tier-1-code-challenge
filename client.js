@@ -10,8 +10,10 @@ console.log('Step 0 complete! client.js loaded!');
 // Write your code here!
 
 // 1. Start with the number 29 and set that equal to a variable named ‘highScore’;
+let highScore = 29;
 
 // 2. Make a new empty array called myScrabbleTiles.
+let myScrabbleTiles = [];
 
 // 3. Put these 6 tile objects into myScrabbleTiles:
 /*
@@ -22,6 +24,21 @@ console.log('Step 0 complete! client.js loaded!');
   { tile: 'D', score: 2 }
   { tile: 'A', score: 1 }
 */
+// using function addTile to push tiles above into array myScrabbleTiles
+function addTile (tile, score){
+  // creating object with multiple values for tile and score
+  let tileToAdd = {
+    tile : tile,
+    score: score
+  }
+  // pushing tile with current arguments to array
+  myScrabbleTiles.push(tileToAdd)
+}
+
+// running function to add first tile to array
+addTile( 'N', 1)
+// console logging expanded array
+console.log( ...myScrabbleTiles )
 
 // 4. Remove the last tile from myScrabbleTiles.
 
